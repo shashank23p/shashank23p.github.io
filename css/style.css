@@ -2,11 +2,6 @@
 body {
   background-color: black;
 }
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
@@ -103,4 +98,29 @@ a {
 }
 .hover-150:hover {
   transform: scale(1.01);
+}
+
+@media only screen and (max-width: 850px) {
+  section,
+  header {
+    grid-column: 2 / span 10;
+    padding: 10px;
+  }
+  header {
+    font-size: 1.3rem;
+  }
+  .left,
+  .right {
+    grid-column: 2 / span 10;
+  }
+  blockquote {
+    grid-column: 2 / span 10;
+  }
+  blockquote p {
+    font-size: 2rem;
+  }
+  main {
+    padding: 120px 0px;
+    margin: 0;
+  }
 }

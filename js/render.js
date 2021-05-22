@@ -44,11 +44,17 @@ function init() {
   scene.add(ambiantLight);
 
   renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#bg") });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  resize();
   renderer.setAnimationLoop(animation);
   document.body.appendChild(renderer.domElement);
   moveCamera();
+}
+
+function resize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 function animation(time) {
@@ -68,3 +74,4 @@ function rotateMoon() {
 }
 
 document.body.onscroll = moveCamera;
+document.body.onresize = resize;
