@@ -1,5 +1,8 @@
 @import url("https://use.typekit.net/jmk3xov.css");
+html,
 body {
+  padding: 0px;
+  margin: 0px;
   background-color: black;
 }
 
@@ -105,6 +108,8 @@ a {
   header {
     grid-column: 2 / span 10;
     padding: 10px;
+    font-size: 1rem;
+    overflow-x: hidden;
   }
   header {
     font-size: 1.3rem;
@@ -118,9 +123,5 @@ a {
   }
   blockquote p {
     font-size: 2rem;
-  }
-  main {
-    padding: 120px 0px;
-    margin: 0;
   }
 }

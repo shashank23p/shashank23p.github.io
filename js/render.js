@@ -35,12 +35,12 @@ function init() {
   scene.add(moon);
 
   // add point light
-  const pointLight = new THREE.PointLight("0xffffff", 2);
+  const pointLight = new THREE.PointLight("white", 2);
   pointLight.position.set(20, 10, 30);
   scene.add(pointLight);
 
   // ambiant light
-  const ambiantLight = new THREE.AmbientLight("0x404040", 0.1);
+  const ambiantLight = new THREE.AmbientLight("#404040", 0.1);
   scene.add(ambiantLight);
 
   renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#bg") });
