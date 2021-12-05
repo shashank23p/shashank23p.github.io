@@ -147,3 +147,7 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.emoji{
+  font-weight: 100;
+}
